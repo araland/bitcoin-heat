@@ -1,7 +1,5 @@
 import sys
-import requests
 import jsonlibs
-import random
 
 def install_and_import(package):
     import importlib
@@ -10,6 +8,13 @@ def install_and_import(package):
     except ImportError:
         import pip
         pip.main(['install', package])
+        
+install_and_import('urllib3')        
+install_and_import('idna')
+install_and_import('certifi')
+      
+import random
+import requests
 
 
 # Get account and balance info
